@@ -1,10 +1,10 @@
 const cards = document.querySelectorAll('.card')
 const toggleBrand = document.querySelector('.expand-brand')
 const toggleRepair = document.querySelector('.expand-repair')
-const expandImgBrand = document.querySelector('.expand__img-brand')
-const expandTextBrand = document.querySelector('.expand__text-brand')
-const expandImgRepair = document.querySelector('.expand__img-repair')
-const expandTextRepair = document.querySelector('.expand__text-repair')
+const expandImgBrand = document.querySelector('.expand-brand__img')
+const expandTextBrand = document.querySelector('.expand-brand__text')
+const expandImgRepair = document.querySelector('.expand-repair__img')
+const expandTextRepair = document.querySelector('.expand-repair__text')
 function swapBrands() {
   cards.forEach((card) => {
     if (card.classList.contains('card__swap')) {

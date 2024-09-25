@@ -1,0 +1,9 @@
+.icon {
+  background-color: $pink;
+  border-radius: 40%;
+  padding: 11px;
+  transition: 2s;
+}
+.icon:hover {
+  transform: rotate(360deg);
+}

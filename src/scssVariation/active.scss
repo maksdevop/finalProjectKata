@@ -1,0 +1,11 @@
+.active {
+  border: 2px solid $green-border;
+  background-color: $white;
+}
+.blurred {
+  filter: opacity(5%);
+  pointer-events: none;
+}
+.active-grey {
+  color: $active-grey;
+}

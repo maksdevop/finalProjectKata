@@ -1,0 +1,36 @@
+.footer {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    align-items: center;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+    list-style: none;
+  }
+
+  &__text {
+    color: $active-grey;
+    text-align: center;
+    font-size: 14px;
+    max-width: 320px;
+    &-span {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  .footer__text {
+    max-width: 220px;
+  }
+}

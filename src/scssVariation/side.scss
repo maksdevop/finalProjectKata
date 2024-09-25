@@ -1,0 +1,131 @@
+.container-aside {
+  display: none;
+  left: 0;
+  top: 0;
+  width: 320px;
+  z-index: 999;
+  min-height: 100vh;
+}
+
+.container-aside__visible {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 320px;
+  position: fixed;
+}
+.side {
+  padding: 18px 24px 0px 24px;
+  background-color: $white;
+  box-shadow: 20px 0 15px $box-shadow;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    border: none;
+    background-color: $inherit;
+    cursor: pointer;
+  }
+
+  &__menu-list {
+    list-style: none;
+  }
+
+  &__menu-item {
+    padding: 5px;
+    margin-top: 22px;
+    &:hover {
+      background-color: $light-pink-hover;
+      border-radius: 10px;
+      transition: 1s;
+      cursor: pointer;
+    }
+  }
+
+  &__menu {
+    flex: 1;
+
+    &_active {
+      color: $active-grey;
+      border-left: 3px solid $green-border;
+      padding-left: 24px;
+      margin-left: -24px;
+    }
+  }
+
+  &__footer {
+    padding-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  &__footer-images {
+    display: flex;
+    list-style: none;
+  }
+
+  &__message {
+    margin: 0 16px;
+  }
+
+  &__email {
+    display: inline-block;
+    margin: 16px 0 12px 0;
+    font-size: 16px;
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__tel {
+    display: block;
+    margin: 12px 0 20px 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.languages {
+  display: flex;
+  list-style: none;
+
+  &__list:not(:last-child) {
+    margin-right: 7px;
+  }
+}
+
+@media (min-width: 320px) {
+  .side {
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .side {
+    box-shadow: none;
+    min-height: 100%;
+  }
+  .side__close {
+    display: none;
+  }
+
+  .side__footer {
+    flex-grow: 1;
+  }
+  .container-aside {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 320px;
+  }
+}

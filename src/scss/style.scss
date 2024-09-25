@@ -1,0 +1,49 @@
+@import '../color/color.scss';
+@import '../scssVariation/active.scss';
+@import '../scssVariation/card.scss';
+@import '../scssVariation/cards.scss';
+@import '../scssVariation/feedback.scss';
+@import '../scssVariation/footer.scss';
+@import '../scssVariation/header.scss';
+@import '../scssVariation/icon.scss';
+@import '../scssVariation/main.scss';
+@import '../scssVariation/services.scss';
+@import '../scssVariation/side.scss';
+@import '../scssVariation/swiper.scss';
+@import '../scssVariation/logo.scss';
+@import '../scssVariation/title.scss';
+@import '../scssVariation/btn.scss';
+@import '../fonts/fonts.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'TT Lakes', sans-serif;
+  font-weight: 500;
+  background-color: $background;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+  body {
+    min-height: 100%;
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}

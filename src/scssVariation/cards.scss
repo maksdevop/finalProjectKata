@@ -1,0 +1,196 @@
+.cards {
+  padding-left: 20px;
+  margin: 50px 0;
+}
+
+.expand-brand,
+.expand-repair {
+  display: none;
+  padding: 0 0 32px 20px;
+  &__text {
+    transition: all 1s ease-in-out;
+    margin-left: 8px;
+    border: none;
+    background-color: $inherit;
+    cursor: pointer;
+    &:hover {
+      color: $light-red;
+    }
+  }
+
+  &__text-repair {
+    transition: all 1s ease-in-out;
+    margin-left: 8px;
+    &:hover {
+      color: $light-red;
+    }
+  }
+}
+
+.card-repair {
+  height: 160px !important;
+  align-items: normal;
+  position: relative;
+
+  &__info {
+    position: absolute;
+    top: 105px;
+    right: 5px;
+  }
+
+  &__hidden-768 {
+    display: none;
+  }
+}
+
+.cards-wrap {
+  display: none;
+}
+
+.card-price {
+  padding: 17px;
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 10px;
+  margin: 0 24px 16px 0;
+  width: 260px !important;
+  min-height: 200px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__title::before {
+    display: block;
+    content: 'Ремонтные услуги';
+    color: $active-grey;
+  }
+
+  &__text::before {
+    display: block;
+    content: 'Цена ';
+    color: $active-grey;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
+  }
+
+  &__time {
+    display: block;
+    content: 'Срок ';
+    color: $active-grey;
+  }
+}
+
+.price {
+  padding: 0 16px;
+
+  &__info {
+    max-width: 480px;
+  }
+
+  &__btn {
+    margin: 20px 0 80px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    &::after {
+      content: url(../img/dropdown.svg);
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  .price__btn {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .expand-brand,
+  .expand-repair {
+    display: flex;
+    align-items: center;
+  }
+  .cards-price {
+    display: block;
+  }
+
+  .cards {
+    margin-top: 10px;
+  }
+  .card-price {
+    flex-direction: row;
+    width: 100% !important;
+    align-items: center;
+    min-height: 100%;
+  }
+  .card-price__wrap {
+    align-items: center;
+    flex: 0 0 30%;
+  }
+  .card-price__title::before,
+  .card-price__text::before,
+  .card-price__time::before {
+    content: '';
+  }
+  .card-price__title {
+    max-width: 350px;
+    flex: 0 0 50%;
+  }
+  .card-price__text {
+    flex: 0 0 20%;
+  }
+
+  .cards-wrap {
+    display: flex;
+    padding: 16px 0 0px 35px;
+    margin-top: 20px;
+    color: $active-grey;
+  }
+
+  .cards-wrap__text:nth-child(1) {
+    flex: 0 0 50%;
+  }
+  .cards-wrap__text:nth-child(2) {
+    flex: 0 0 20%;
+  }
+  .cards-wrap__text:nth-child(3) {
+    flex: 0 0 30%;
+  }
+}
+
+@media (min-width: 900px) {
+  .cards-wrap__text:nth-child(1) {
+    flex: 0 0 45%;
+  }
+  .cards-wrap__text:nth-child(2) {
+    flex: 0 0 23%;
+  }
+}
+
+@media (min-width: 1120px) {
+  .cards-wrap__text:nth-child(1) {
+    flex: 0 0 42%;
+  }
+  .cards-wrap__text:nth-child(2) {
+    flex: 0 0 27%;
+  }
+  .cards-wrap__text:nth-child(3) {
+    flex: 0 0 31%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card-repair__hidden-768 {
+    display: block;
+  }
+}

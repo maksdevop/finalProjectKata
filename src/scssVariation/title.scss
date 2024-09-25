@@ -1,0 +1,12 @@
+.title-main {
+  border-left: 3px solid rgb(65, 246, 215);
+}
+.title {
+  border-top: 1px solid $light-green-border;
+  background: linear-gradient(to right, $background, $white);
+  color: $active-grey;
+  text-transform: uppercase;
+  background-color: $white;
+  padding: 20px 0 20px 20px;
+  font-size: 16px;
+}

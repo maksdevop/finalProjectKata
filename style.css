@@ -455,6 +455,9 @@
 .service-nav__list:not(:last-child) {
   margin: 30px 0; }
 
+.service-nav__list:last-child {
+  margin-bottom: 10px; }
+
 .service-nav__link {
   text-decoration: none;
   color: #7e7e82;
@@ -529,12 +532,11 @@
     list-style: none; }
   .side__menu-item {
     padding: 5px;
-    margin-top: 22px; }
+    margin-top: 22px;
+    cursor: pointer; }
     .side__menu-item:hover {
-      background-color: #ffe8e8;
-      border-radius: 10px;
-      transition: 1s;
-      cursor: pointer; }
+      color: #c23a3a;
+      text-decoration: underline; }
   .side__menu {
     flex: 1; }
     .side__menu_active {
@@ -561,7 +563,7 @@
     margin: 12px 0 20px 0;
     font-size: 24px;
     line-height: 32px;
-    font-weight: bolder;
+    font-weight: 700;
     text-decoration: none;
     color: black; }
 
@@ -672,7 +674,7 @@
 
 body {
   font-family: 'TT Lakes', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   background-color: #f8f8f8; }
 
 .overlay {

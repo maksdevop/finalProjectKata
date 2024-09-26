@@ -44,11 +44,10 @@
   &__menu-item {
     padding: 5px;
     margin-top: 22px;
+    cursor: pointer;
     &:hover {
-      background-color: $light-pink-hover;
-      border-radius: 10px;
-      transition: 1s;
-      cursor: pointer;
+      color: $light-pink-hover;
+      text-decoration: underline;
     }
   }
 
@@ -90,7 +89,7 @@
     margin: 12px 0 20px 0;
     font-size: 24px;
     line-height: 32px;
-    font-weight: bolder;
+    font-weight: 700;
     text-decoration: none;
     color: $black;
   }

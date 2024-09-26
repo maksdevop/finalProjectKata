@@ -5,6 +5,25 @@ const expandImgBrand = document.querySelector('.expand-brand__img')
 const expandTextBrand = document.querySelector('.expand-brand__text')
 const expandImgRepair = document.querySelector('.expand-repair__img')
 const expandTextRepair = document.querySelector('.expand-repair__text')
+const activeLi = document.querySelectorAll('.side__menu-item')
+const activeLink = document.querySelectorAll('.service-nav__link')
+const activeLang = document.querySelectorAll('.languages__item')
+
+function addActiveLang() {
+  activeLang.forEach((el) => el.classList.remove('active-grey'))
+  this.classList.add('active-grey')
+}
+
+function addActiveLi() {
+  activeLi.forEach((el) => el.classList.remove('side__menu_active'))
+  this.classList.add('side__menu_active')
+}
+
+function addActiveLink() {
+  activeLink.forEach((el) => el.classList.remove('active'))
+  this.classList.add('active')
+}
+
 function swapBrands() {
   cards.forEach((card) => {
     if (card.classList.contains('card__swap')) {
@@ -46,5 +65,16 @@ function swapRepair() {
 
 toggleBrand.addEventListener('click', swapBrands)
 toggleRepair.addEventListener('click', swapRepair)
+activeLi.forEach((item) => {
+  item.addEventListener('click', addActiveLi)
+})
+
+activeLink.forEach((item) => {
+  item.addEventListener('click', addActiveLink)
+})
+
+activeLang.forEach((item) => {
+  item.addEventListener('click', addActiveLang)
+})
 
 export default button
